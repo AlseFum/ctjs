@@ -4,13 +4,12 @@ This is a personal, experimental project.  It is **not currently published to
 npm**.  The package is not marked private, so publishing remains possible, but
 it is a deliberate manual step.
 
-## Before the first push
+## Repository setup
 
 1. Repository name: `ctjs`.
 2. The package is not private.  `npm publish` is still a deliberate action; do
    not run it unless you have checked the package name and the release contents.
-3. Optional: add repository metadata to `package.json` so the GitHub link appears
-   in tooling:
+3. Repository metadata is already set in `package.json`:
 
    ```json
    "repository": {
@@ -45,12 +44,19 @@ git remote add origin git@github.com:AlseFum/ctjs.git
 git push -u origin main
 ```
 
+## CI workflow
+
+The workflow file is at `.github/workflows/ci.yml`.  If the repository shows no
+Actions workflow, add that file through the GitHub web UI, or push it with a
+token that has `Workflows: Read and write`.  A token with only `Contents` access
+cannot create workflow files.
+
 ## Repository page
 
 - Description: `A staged compile-time layer for JavaScript — experimental`
 - Topics: `javascript`, `compiler`, `compile-time`, `metaprogramming`,
   `experimental`, `babel`
-- Enable GitHub Actions (the workflow runs tests, the demo, and a package check)
+- Enable GitHub Actions after the workflow file exists
 - Pin the README or `docs/semantics.md`
 - Add the CI badge once the repository URL is known:
 
