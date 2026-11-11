@@ -58,11 +58,7 @@ cannot create workflow files.
   `experimental`, `babel`
 - Enable GitHub Actions after the workflow file exists
 - Pin the README or `docs/semantics.md`
-- Add the CI badge once the repository URL is known:
-
-  ```md
-  [![CI](https://github.com/AlseFum/ctjs/actions/workflows/ci.yml/badge.svg)](https://github.com/AlseFum/ctjs/actions/workflows/ci.yml)
-  ```
+- The CI badge is already in `README.md`; update its URL if the repository moves.
 
 ## Publishing to npm (optional)
 

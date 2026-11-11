@@ -5,6 +5,7 @@
 ![status](https://img.shields.io/badge/status-experimental-orange)
 ![node](https://img.shields.io/badge/node-%5E22.18%20%7C%7C%20%3E%3D24.11-blue)
 ![license](https://img.shields.io/badge/license-MIT-green)
+[![CI](https://github.com/AlseFum/ctjs/actions/workflows/ci.yml/badge.svg)](https://github.com/AlseFum/ctjs/actions/workflows/ci.yml)
 
 > **Status: experimental (v0.1).** The syntax and semantics may change before
 > 1.0. This is a working research prototype, not a drop-in production
