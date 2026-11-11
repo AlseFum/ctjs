@@ -15,11 +15,11 @@ it is a deliberate manual step.
    ```json
    "repository": {
      "type": "git",
-     "url": "git+https://github.com/<owner>/ctjs.git"
+     "url": "git+https://github.com/AlseFum/ctjs.git"
    },
-   "homepage": "https://github.com/<owner>/ctjs#readme",
+   "homepage": "https://github.com/AlseFum/ctjs#readme",
    "bugs": {
-     "url": "https://github.com/<owner>/ctjs/issues"
+     "url": "https://github.com/AlseFum/ctjs/issues"
    }
    ```
 
@@ -41,7 +41,7 @@ git init
 git add .
 git commit -m "feat: initial ctjs compiler"
 git branch -M main
-git remote add origin git@github.com:<owner>/ctjs.git
+git remote add origin git@github.com:AlseFum/ctjs.git
 git push -u origin main
 ```
 
@@ -55,7 +55,7 @@ git push -u origin main
 - Add the CI badge once the repository URL is known:
 
   ```md
-  [![CI](https://github.com/<owner>/ctjs/actions/workflows/ci.yml/badge.svg)](https://github.com/<owner>/ctjs/actions/workflows/ci.yml)
+  [![CI](https://github.com/AlseFum/ctjs/actions/workflows/ci.yml/badge.svg)](https://github.com/AlseFum/ctjs/actions/workflows/ci.yml)
   ```
 
 ## Publishing to npm (optional)

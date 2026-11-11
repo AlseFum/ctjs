@@ -81,7 +81,7 @@ a type system.
 Requires Node `^22.18.0` or `>=24.11.0` (Babel 8's engine range).
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/AlseFum/ctjs.git
 cd ctjs
 npm ci
 npm test

@@ -2,6 +2,14 @@
   "name": "ctjs",
   "version": "0.1.0",
   "description": "A staged compile-time layer for JavaScript — experimental personal project.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AlseFum/ctjs.git"
+  },
+  "homepage": "https://github.com/AlseFum/ctjs#readme",
+  "bugs": {
+    "url": "https://github.com/AlseFum/ctjs/issues"
+  },
   "type": "module",
   "main": "./src/index.js",
   "exports": {
