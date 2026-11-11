@@ -1,0 +1,52 @@
+name: Bug report
+description: Report a compiler, CLI, or plugin problem.
+title: "bug: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for trying ctjs.  Please include a minimal input program and the
+        exact command you ran.
+  - type: input
+    id: version
+    attributes:
+      label: ctjs version / commit
+      placeholder: "0.1.0 or a commit SHA"
+    validations:
+      required: true
+  - type: input
+    id: node
+    attributes:
+      label: Node version
+      placeholder: "v22.18.0"
+    validations:
+      required: true
+  - type: textarea
+    id: input
+    attributes:
+      label: Minimal input
+      description: A small `.js` file using the macro syntax.
+      render: javascript
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command
+      placeholder: "npm run compile -- example.js --stdout"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected output
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual output / error
+      render: shell
+    validations:
+      required: true

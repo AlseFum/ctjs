@@ -1,0 +1,50 @@
+{
+  "name": "ctjs",
+  "version": "0.1.0",
+  "description": "A staged compile-time layer for JavaScript — experimental personal project.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./plugin": "./src/plugin.js",
+    "./preprocess": "./src/preprocess.js",
+    "./modules": "./src/modules.js"
+  },
+  "bin": {
+    "ctjs": "./src/cli.js"
+  },
+  "files": [
+    "src",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "test:watch": "node --test --watch",
+    "demo": "node scripts/demo.js",
+    "compile": "node src/cli.js build",
+    "build:example": "node src/cli.js build examples/collector/main.ctjs --out-dir examples/collector/dist",
+    "prepublishOnly": "npm test && npm run demo"
+  },
+  "keywords": [
+    "javascript",
+    "compiler",
+    "compile-time",
+    "metaprogramming",
+    "experimental",
+    "babel"
+  ],
+  "author": "ctjs contributors",
+  "license": "MIT",
+  "engines": {
+    "node": "^22.18.0 || >=24.11.0"
+  },
+  "dependencies": {
+    "@babel/code-frame": "^8.0.6",
+    "@babel/core": "^8.1.0",
+    "@babel/parser": "^8.1.0",
+    "@babel/traverse": "^8.1.0",
+    "@babel/types": "^8.1.0"
+  }
+}

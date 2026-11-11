@@ -1,0 +1,30 @@
+// Compile-time values and per-node lowering.
+<const> target = "prod";
+<const> retries = 3;
+
+<if>(target === "prod") {
+  console.log("production build, retries:", retries);
+} <else> {
+  console.log("development build");
+}
+
+<for>(name of ["alpha", "beta"]) {
+  console.log("plugin:", name);
+}
+
+<switch>(retries) {
+  case 1: console.log("one retry"); break;
+  case 3: console.log("three retries"); break;
+  default: console.log("custom retries");
+}
+
+// A runtime branch keeps its control flow, while the inner <if> is still
+// resolved at compile time.
+function report(enabled) {
+  <if>(enabled) {
+    <if>(target === "prod") { console.log("prod path"); }
+  }
+}
+
+report(true);
+report(false);

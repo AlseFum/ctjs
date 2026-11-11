@@ -1,0 +1,22 @@
+// Compile-time multi-clause functions.  The first three calls are resolved by
+// the compiler; the last two stay as a runtime dispatcher.
+<fn arg> label(arg == 1) { return "one"; }
+<fn arg> label(arg == 2) { return "two"; }
+<fn _> label(_) { return "other"; }
+
+<const> a = label(1);
+<const> b = label(2);
+console.log("compile-time:", a, b);
+
+function runtimeLabel(x) {
+  return label(x);
+}
+console.log("runtime:", runtimeLabel(1), runtimeLabel(9));
+
+// Compile-time recursion is evaluated by the compiler.
+<fn> fact(n) {
+  <if>(n <= 1) { return 1; }
+  return n * fact(n - 1);
+}
+<const> f = fact(5);
+console.log("fact(5):", f);

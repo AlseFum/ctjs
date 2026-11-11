@@ -1,0 +1,6 @@
+<import> { dataHandler } from "./registry.ctjs";
+
+dataHandler.register("main");
+
+<const> results = <await> dataHandler.collectAll();
+console.log("collected:", results.sort().join(", "));

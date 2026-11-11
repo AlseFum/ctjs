@@ -1,0 +1,31 @@
+name: Feature request
+description: Propose a semantic or tooling improvement.
+title: "feat: "
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What are you trying to express that the current system cannot?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal
+      description: Syntax, semantics, or tooling you have in mind.
+    validations:
+      required: true
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+  - type: checkboxes
+    id: scope
+    attributes:
+      label: Scope check
+      options:
+        - label: This does not require compile-time AST manipulation.
+        - label: This does not require async compile-time work in the Babel transform.
+        - label: This keeps `<fn>` clauses at module top level.

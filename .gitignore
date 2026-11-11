@@ -1,0 +1,8 @@
+node_modules/
+dist/
+examples/collector/dist/
+coverage/
+*.tgz
+.DS_Store
+npm-debug.log*
+*.log
